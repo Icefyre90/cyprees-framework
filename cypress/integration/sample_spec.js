@@ -14,11 +14,11 @@ describe('Product test', () =>
   });
   
         
-     it('login-logout user', () =>                   // login, loguot
-     {
-        cy.login(data.email,data.password)  // login proces
-        cy.logout()                         // logout proces
-    })
+    //  it('login-logout user', () =>                   // login, loguot
+    //  {
+    //     cy.login(data.email,data.password)  // login proces
+    //     cy.logout()                         // logout proces
+    // })
 
 
 
@@ -31,8 +31,9 @@ describe('Product test', () =>
         cy.visit(data.siteUrl)                                    // Opens the URL
         cy.get('#search').type(data.search_word)                  // input search product
         cy.get('.button[type=submit][title=Pretraga]').click()    // click on search
-        cy.get(".products-grid li:nth-child(10) .price").invoke('attr','content').then(content => {
-
+        cy.get(".products-grid li:nth-child(10) [data-tipped-selector='#web-price-tooltip'] .price").invoke('attr','content').then(content => {
+           
+           console.log(content);
            price = content;
            console.log(price);
            finalprice= price * 2;
