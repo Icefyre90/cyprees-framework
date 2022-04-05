@@ -33,9 +33,7 @@ describe('Product test', () =>
         cy.get('.button[type=submit][title=Pretraga]').click()    // click on search
         cy.get(".products-grid li:nth-child(10) [data-tipped-selector='#web-price-tooltip'] .price").invoke('attr','content').then(content => {
            
-           console.log(content);
            price = content;
-           console.log(price);
            finalprice= price * 2;
            finalprice= parseFloat(finalprice).toFixed(2)
            finalprice=finalprice.toString();
