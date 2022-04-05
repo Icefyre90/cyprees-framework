@@ -14,11 +14,11 @@ describe('Product test', () =>
   });
   
         
-    //  it('login-logout user', () =>                   // login, loguot
-    //  {
-    //     cy.login(data.email,data.password)  // login proces
-    //     cy.logout()                         // logout proces
-    // })
+     it('login-logout user', () =>                   // login, loguot
+     {
+        cy.login(data.email,data.password)  // login proces
+        cy.logout()                         // logout proces
+    })
 
 
 
